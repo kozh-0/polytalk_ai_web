@@ -105,7 +105,7 @@ const BurgerMenu = ({
     <>
       {/* Мобильное меню */}
       <div
-        className={`fixed top-[73px] left-0 right-0 bg-blue-100/95 backdrop-blur-md z-40 transition-transform duration-300 ${
+        className={`fixed top-18.25 left-0 right-0 bg-blue-100/95 backdrop-blur-md z-40 transition-transform duration-300 ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

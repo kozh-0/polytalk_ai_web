@@ -36,7 +36,7 @@ export default function Landing() {
           </div>
         </div>
 
-        <div className="mb-10 flex justify-centermb-12 text-gray-500 text-base sm:text-base text-center px-4">
+        <div className="flex justify-center mb-12 text-gray-500 text-base sm:text-base px-4">
           <div className="max-w-[710px] gap-x-3 gap-y-2">
             🇺🇸 EN • 🇫🇷 FR • 🇩🇪 DE • 🇮🇹 IT • 🇪🇸 ES • 🇵🇹 PT • 🇳🇱 NL • 🇸🇪 SV • 🇬🇷 EL • 🇵🇱 PL • 🇨🇿 CS •
             🇷🇺 RU • 🇺🇦 UK • 🇭🇺 HU • 🇹🇷 TR • 🇨🇳 ZH • 🇯🇵 JA • 🇰🇷 KO • 🇮🇳 HI • 🇦🇪 AR • 🇮🇩 ID • 🇷🇴 RO •
