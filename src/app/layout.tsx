@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description:
       "AI собеседник, Практика общения на 23 языках, Голос + текст + перевод, Правка ошибок + рекомендации, Изучение языков, Замена репетитора",
     url: "https://polytalk-ai-web.vercel.app/",
-    siteName: "Wise HR",
+    siteName: "PolyTalk AI",
     images: [{ url: "/favicon.ico", width: 1200, height: 630 }],
     locale: "ru_RU",
     type: "website",

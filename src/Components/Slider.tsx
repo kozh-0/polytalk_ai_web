@@ -59,7 +59,7 @@ export default function Slider() {
   return (
     <>
       <div className="w-full bg-blue-100/80 backdrop-blur-md z-50 py-16">
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-5xl mx-auto px-4">
           <div className="relative overflow-hidden rounded-xl">
             <div
               className="flex transition-transform duration-700 ease-out"

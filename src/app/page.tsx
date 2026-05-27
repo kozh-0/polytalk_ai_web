@@ -1,4 +1,7 @@
+import CTA from "@/Components/CTA";
 import Landing from "@/Components/Landing";
+import Prices from "@/Components/Prices";
+import Reviews from "@/Components/Reviews";
 import Slider from "@/Components/Slider";
 
 export default function Home() {
@@ -7,6 +10,12 @@ export default function Home() {
       <Landing />
 
       <Slider />
+
+      <Reviews />
+
+      <Prices />
+
+      <CTA />
     </section>
   );
 }
