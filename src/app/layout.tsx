@@ -17,40 +17,77 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: `PolyTalk - AI собеседник на 23 языках. Изучение языков, замена репетитора, живое общение`,
+  // Primary title (60 characters max for optimal display)
+  title: {
+    default: "PolyTalk - AI собеседник на 23 языках | Изучение языков онлайн",
+    template: "%s | PolyTalk AI собеседник",
+  },
+
+  // Description (150-160 characters ideal)
   description:
-    "AI собеседник, практика общения на 23 языках, Голос + текст + перевод, Правка ошибок + рекомендации, Изучение языков, Замена репетитора",
-  // TODO: add keywords
-  keywords: `английский язык, немецкий язык, французский язык, русский язык, украинский, 
-итальянский язык, испанский язык, китайский язык, японский язык, курсы английского
-общение классы языков, репетитор, изучение языков, ии бесплатно`,
+    "Изучайте 23 языка с AI собеседником PolyTalk. Голосовое общение, перевод, исправление ошибок и рекомендации. Бесплатная альтернатива репетитору и языковым курсам.",
+
+  // Keywords (removed duplicates, added more specific terms)
+  keywords: [
+    "изучение языков",
+    "AI собеседник",
+    "репетитор английского",
+    "разговорный английский",
+    "языковой тренажер",
+    "практика речи AI",
+    "изучение английского онлайн",
+    "французский язык",
+    "немецкий язык",
+    "испанский язык",
+    "итальянский язык",
+    "китайский язык",
+    "японский язык",
+    "украинский язык",
+    "голосовой переводчик",
+    "замена репетитора",
+  ],
+
   authors: [
     {
       name: "Dmitry Kozhevnikov",
       url: "https://www.linkedin.com/in/dmitry-kozh/",
     },
   ],
+
+  // Open Graph for social sharing
   openGraph: {
-    title:
-      "PolyTalk - AI собеседник на 23 языках. Изучение языков · замена репетитора · живое общение",
+    title: "PolyTalk - AI собеседник: Изучайте 23 языка с ИИ",
     description:
-      "AI собеседник, Практика общения на 23 языках, Голос + текст + перевод, Правка ошибок + рекомендации, Изучение языков, Замена репетитора",
+      "Практика разговорной речи, голосовое общение и перевод. Замените репетитора AI ассистентом. Бесплатно!",
     url: "https://polytalk-ai-web.vercel.app/",
     siteName: "PolyTalk AI",
-    images: [{ url: "/favicon.ico", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "/og-image.jpg", // Create a custom OG image (1200x630)
+        width: 1200,
+        height: 630,
+        alt: "PolyTalk - AI собеседник на 23 языках",
+      },
+    ],
     locale: "ru_RU",
+    alternateLocale: ["en_US", "uk_UA"],
     type: "website",
   },
-  metadataBase: new URL("https://polytalk-ai-web.vercel.app/"),
+
+  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title:
-      "PolyTalk - AI собеседник на 23 языках. Изучение языков · замена репетитора · живое общение",
+    site: "@polytalk", // Add your Twitter handle if you have one
+    creator: "@dmitrykozh", // Add creator's handle
+    title: "PolyTalk - AI собеседник на 23 языках",
     description:
-      "AI собеседник, Живое общение на 23 языках, Голос + текст + перевод, Правка ошибок + рекомендации, Изучение языков, Замена репетитора",
-    images: ["/favicon.ico"],
+      "Изучайте языки с AI. Голосовое общение, перевод и рекомендации. Бесплатная альтернатива репетитору.",
+    images: ["/og-image.jpg"], // Use the same OG image
   },
 
+  metadataBase: new URL("https://polytalk-ai-web.vercel.app/"),
+
+  // Robots configuration
   robots: {
     index: true,
     follow: true,
@@ -61,6 +98,45 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+
+  // Additional SEO improvements
+  alternates: {
+    canonical: "https://polytalk-ai-web.vercel.app/",
+    languages: {
+      ru: "/",
+      en: "/en",
+      uk: "/uk",
+    },
+  },
+
+  // Verification for search consoles
+  verification: {
+    google: "your-google-verification-code", // Add when you have it
+    yandex: "your-yandex-verification-code", // Add for Yandex (important for Russian audience)
+  },
+
+  // App links and other meta
+  appleWebApp: {
+    title: "PolyTalk AI",
+    statusBarStyle: "black-translucent",
+  },
+
+  formatDetection: {
+    telephone: false,
+  },
+
+  // Category and classification
+  category: "education",
+  classification: "Language Learning, AI Education",
+
+  // Other important meta tags
+  other: {
+    "yandex-verification": "your-yandex-verification-code", // Alternative Yandex format
+    "google-site-verification": "your-google-verification-code",
+    author: "Dmitry Kozhevnikov",
+    copyright: "PolyTalk",
+    "revisit-after": "7 days",
   },
 };
 

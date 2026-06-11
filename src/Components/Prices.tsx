@@ -1,3 +1,5 @@
+import { AppleEmoji } from "./AppleEmoji";
+
 const SUBSCRIPTION_PLANS = [
   {
     id: "14-days",
@@ -130,7 +132,9 @@ export default function Prices() {
         <div className="mt-8 text-center">
           <div className="inline-block bg-green-50 border border-green-200 rounded-xl p-4 px-6">
             <div className="flex items-center gap-3 flex-wrap justify-center">
-              <span className="text-green-600 text-2xl">🎁</span>
+              <span className="text-green-600 leading-0">
+                <AppleEmoji name="gift" size={26} />
+              </span>
               <span className="font-semibold text-gray-700">Бесплатный тариф:</span>
               <span className="text-gray-600">7 сообщений в день</span>
               <span className="text-gray-300">•</span>

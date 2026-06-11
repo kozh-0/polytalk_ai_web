@@ -1,4 +1,6 @@
-// components/Hero.jsx
+import { AppleEmoji } from "./AppleEmoji";
+import { Flags } from "./Flags";
+
 export default function Landing() {
   return (
     <section className="min-h-[calc(100vh-18rem)] w-full flex items-center justify-center">
@@ -10,7 +12,9 @@ export default function Landing() {
             <span className="bg-linear-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
               на языке, <br /> который учите?
             </span>
-            <span className="inline-block animate-pulse ml-2">🤔</span>
+            <span className="inline-block animate-pulse ml-2">
+              <AppleEmoji name="thinking" size={32} />
+            </span>
           </h1>
         </div>
 
@@ -30,18 +34,14 @@ export default function Landing() {
           <div className="flex items-center gap-1 flex-wrap justify-center">
             <span className="wrap-break-words text-2xl sm:text-2xl">
               <u>живое общение</u> в Telegram на{" "}
-              <span className="font-bold whitespace-nowrap">23 языках! ✨</span>
+              <span className="font-bold whitespace-nowrap">
+                23 языках! <AppleEmoji name="sparkles" size={30} />
+              </span>
             </span>
           </div>
         </div>
 
-        <div className="flex justify-center text-gray-500 text-base sm:text-base px-4">
-          <div className="max-w-[710px] gap-x-3 gap-y-2">
-            🇺🇸 EN • 🇫🇷 FR • 🇩🇪 DE • 🇮🇹 IT • 🇪🇸 ES • 🇵🇹 PT • 🇳🇱 NL • 🇸🇪 SV • 🇬🇷 EL • 🇵🇱 PL • 🇨🇿 CS •
-            🇷🇺 RU • 🇺🇦 UK • 🇭🇺 HU • 🇹🇷 TR • 🇨🇳 ZH • 🇯🇵 JA • 🇰🇷 KO • 🇮🇳 HI • 🇦🇪 AR • 🇮🇩 ID • 🇷🇴 RO •
-            🇻🇳 VI
-          </div>
-        </div>
+        <Flags />
 
         <div className="mt-8 mb-10">
           <a
@@ -52,7 +52,9 @@ export default function Landing() {
           >
             Начать бесплатно<span className="text-xl animate-pulse">→</span>
           </a>
-          <p className="text-xs mt-2">🔥 Уже 50+ пользователей</p>
+          <p className="text-xs mt-2">
+            <AppleEmoji name="fire" size={14} /> Уже 50+ пользователей
+          </p>
         </div>
 
         {/* Проблемы vs Решение */}
@@ -62,10 +64,18 @@ export default function Landing() {
             <div className="h-full p-6 rounded-xl border border-gray-200 bg-white">
               <h3 className="text-lg font-medium mb-4 text-center">Проблемы</h3>
               <div className="space-y-3 text-gray-600 text-left">
-                <p>❌ Не с кем говорить</p>
-                <p>❌ Нужно платить репетиторам</p>
-                <p>❌ Не хватает времени</p>
-                <p>❌ Страх общения</p>
+                <p className="flex items-center gap-1">
+                  <AppleEmoji name="cross" size={14} /> Не с кем говорить
+                </p>
+                <p className="flex items-center gap-1">
+                  <AppleEmoji name="cross" size={14} /> Нужно платить репетиторам
+                </p>
+                <p className="flex items-center gap-1">
+                  <AppleEmoji name="cross" size={14} /> Не хватает времени
+                </p>
+                <p className="flex items-center gap-1">
+                  <AppleEmoji name="cross" size={14} /> Страх общения
+                </p>
               </div>
             </div>
           </div>
@@ -79,12 +89,30 @@ export default function Landing() {
             <div className="h-full p-6 rounded-xl border border-gray-200 bg-white">
               <h3 className="text-lg font-medium mb-4 text-center">Решение</h3>
               <div className="space-y-3 text-left">
-                <p>✅ 23 языка 🌐</p>
-                <p>✅ Голос + Текст + Перевод 🎤</p>
-                <p>✅ Правка ошибок ✏️</p>
-                <p>✅ Настройка уровня и голоса ⚙️</p>
-                <p>✅ 24/7, без стресса 😌</p>
-                <p>✅ Пробный режим, доступная подписка </p>
+                <p className="flex items-center gap-1">
+                  <AppleEmoji name="check" size={16} /> 23 языка
+                  <AppleEmoji name="globe" size={16} />
+                </p>
+                <p className="flex items-center gap-1">
+                  <AppleEmoji name="check" size={16} /> Голос + Текст + Перевод
+                  <AppleEmoji name="mic" size={16} />
+                </p>
+                <p className="flex items-center gap-1">
+                  <AppleEmoji name="check" size={16} /> Правка ошибок
+                  <AppleEmoji name="pencil" size={16} />
+                </p>
+                <p className="flex items-center gap-1">
+                  <AppleEmoji name="check" size={16} /> Настройка уровня и голоса
+                  <AppleEmoji name="gear" size={16} />
+                </p>
+                <p className="flex items-center gap-1">
+                  <AppleEmoji name="check" size={16} /> 24/7, без стресса
+                  <AppleEmoji name="relieved" size={16} />
+                </p>
+                <p className="flex items-center gap-1">
+                  <AppleEmoji name="check" size={16} /> Пробный режим
+                  <AppleEmoji name="gift" size={16} />
+                </p>
               </div>
             </div>
           </div>

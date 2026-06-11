@@ -1,3 +1,5 @@
+import { AppleEmoji } from "./AppleEmoji";
+
 export default function CTA() {
   return (
     <section className="max-w-6xl mx-auto text-center my-12">
@@ -22,7 +24,11 @@ export default function CTA() {
 
       {/* Дополнительный триггер */}
       <div className="mt-12 text-sm text-gray-400">
-        <p>✨ Бесплатный тариф ✨ Доступная подписка ✨ 24/7 ✨</p>
+        <p className="inline-flex items-center gap-2">
+          <AppleEmoji name="sparkles" size={16} /> Бесплатный тариф{" "}
+          <AppleEmoji name="sparkles" size={16} /> Доступная подписка{" "}
+          <AppleEmoji name="sparkles" size={16} /> 24/7 <AppleEmoji name="sparkles" size={16} />
+        </p>
       </div>
     </section>
   );

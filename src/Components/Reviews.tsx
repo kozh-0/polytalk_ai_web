@@ -1,45 +1,47 @@
+import { AppleEmoji } from "./AppleEmoji";
+
 const reviews = [
   {
     text: "Разные голоса и уровни 🔥",
     author: "Константин",
     rating: 5,
-    country: "🇩🇪",
+    country: <AppleEmoji name="de" size={16} />,
   },
   {
     text: "Удобно, что можно выбрать уровень. Прогресс пошел!",
     author: "Тимур",
     rating: 5,
-    country: "🇯🇵",
+    country: <AppleEmoji name="jp" size={16} />,
   },
   {
     text: "Класс! Бюджетно и всегда под рукой",
     author: "Марк",
     rating: 5,
-    country: "🇨🇿",
+    country: <AppleEmoji name="cz" size={16} />,
   },
   {
     text: "Лучшая инвестиция в свое развитие за 250 звезд",
     author: "Андрей",
     rating: 5,
-    country: "🇺🇸",
+    country: <AppleEmoji name="us" size={16} />,
   },
   {
     text: "Интерактивно, интересно, не скучно!",
     author: "Галина",
     rating: 5,
-    country: "🇫🇷",
+    country: <AppleEmoji name="fr" size={16} />,
   },
   {
     text: "Атас! Нашел испанскую девушку❤️",
     author: "Айдар",
     rating: 5,
-    country: "🇪🇸",
+    country: <AppleEmoji name="es" size={16} />,
   },
   {
     text: "Бот исправляет ошибки лучше репетитора",
     author: "Татьяна",
     rating: 5,
-    country: "🇬🇧",
+    country: <AppleEmoji name="gb" size={16} />,
   },
 ];
 
