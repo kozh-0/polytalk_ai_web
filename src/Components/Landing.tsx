@@ -13,7 +13,7 @@ export default function Landing() {
               на языке, <br /> который учите?
             </span>
             <span className="inline-block animate-pulse ml-2">
-              <AppleEmoji name="thinking" size={32} />
+              <AppleEmoji name="thinking" size={40} />
             </span>
           </h1>
         </div>
@@ -53,7 +53,7 @@ export default function Landing() {
             Начать бесплатно<span className="text-xl animate-pulse">→</span>
           </a>
           <p className="text-xs mt-2">
-            <AppleEmoji name="fire" size={14} /> Уже 50+ пользователей
+            <AppleEmoji name="fire" size={14} /> Уже 100+ пользователей
           </p>
         </div>
 

@@ -30,7 +30,7 @@ export const Flags = () => {
   ];
 
   return (
-    <div className="text-gray-500 text-base sm:text-base px-4">
+    <div className="text-gray-500 text-base sm:text-base px-4 flex justify-center">
       <div className="max-w-[730px] flex justify-center flex-wrap">
         {flags.map((flag, index) => (
           <div key={index} className="flex items-center gap-x-1">
