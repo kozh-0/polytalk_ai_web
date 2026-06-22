@@ -10,7 +10,7 @@ export default async function Landing() {
       <div className="max-w-6xl mx-auto text-center py-12 px-4">
         {/* Главный заголовок */}
         <div className="bg-linear-to-br from-gray-50 to-gray-100 p-8 md:p-12 rounded-2xl shadow-sm mb-12">
-          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-tight">
+          <h1 className="text-4xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-tight">
             {t("hero.title")} <br />
             <span className="bg-linear-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
               {t("hero.subtitle")}

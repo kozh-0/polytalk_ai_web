@@ -73,7 +73,7 @@ export default async function Prices() {
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                   <span className="bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                    Популярный
+                    {t("popular")}
                   </span>
                 </div>
               )}
