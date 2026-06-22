@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
+import { AppleEmoji } from "@/Components/AppleEmoji";
 
 export default function Header() {
   const t = useTranslations("nav");
@@ -45,9 +46,9 @@ export default function Header() {
                 href="https://t.me/polytalk_ai_bot"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-5 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition-colors duration-200"
+                className="flex gap-1 ml-5 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition-colors duration-200"
               >
-                {t("start")} ✨
+                {t("start")} <AppleEmoji name="sparkles" size={24} />
               </a>
             </div>
 

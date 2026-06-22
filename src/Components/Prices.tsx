@@ -141,7 +141,9 @@ export default async function Prices() {
 
         {/* Дополнительная информация */}
         <div className="mt-8 text-center text-sm text-gray-600">
-          <p>{t("note")}</p>
+          <p>
+            <AppleEmoji name="star" size={16} /> {t("note")}
+          </p>
           <p>
             {t("buy_stars_tg")} -{" "}
             <a

@@ -9,43 +9,43 @@ export default async function Reviews() {
       author: t("users.kostya"),
       text: t("users.kostya_text"),
       rating: 5,
-      country: <AppleEmoji name="de" size={16} />,
+      country: <AppleEmoji name="de" size={20} />,
     },
     {
       author: t("users.timur"),
       text: t("users.timur_text"),
       rating: 5,
-      country: <AppleEmoji name="jp" size={16} />,
+      country: <AppleEmoji name="jp" size={20} />,
     },
     {
       author: t("users.mark"),
       text: t("users.mark_text"),
       rating: 5,
-      country: <AppleEmoji name="cz" size={16} />,
+      country: <AppleEmoji name="cz" size={20} />,
     },
     {
       author: t("users.andrey"),
       text: t("users.andrey_text"),
       rating: 5,
-      country: <AppleEmoji name="us" size={16} />,
+      country: <AppleEmoji name="us" size={20} />,
     },
     {
       author: t("users.galina"),
       text: t("users.galina_text"),
       rating: 5,
-      country: <AppleEmoji name="fr" size={16} />,
+      country: <AppleEmoji name="fr" size={20} />,
     },
     {
       author: t("users.aidar"),
       text: t("users.aidar_text"),
       rating: 5,
-      country: <AppleEmoji name="es" size={16} />,
+      country: <AppleEmoji name="es" size={20} />,
     },
     {
       author: t("users.tatyana"),
       text: t("users.tatyana_text"),
       rating: 5,
-      country: <AppleEmoji name="gb" size={16} />,
+      country: <AppleEmoji name="gb" size={20} />,
     },
   ];
 
@@ -66,16 +66,16 @@ export default async function Reviews() {
               className="inline-block bg-white rounded-xl p-4 shadow-sm min-w-[280px] md:min-w-[320px]"
             >
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-yellow-400">⭐️</span>
-                <span className="text-yellow-400">⭐️</span>
-                <span className="text-yellow-400">⭐️</span>
-                <span className="text-yellow-400">⭐️</span>
-                <span className="text-yellow-400">⭐️</span>
+                {Array.from({ length: 5 }, (_, idx) => (
+                  <span key={idx} className="text-yellow-400">
+                    <AppleEmoji name="star" />
+                  </span>
+                ))}
               </div>
               <p className="text-gray-700 text-sm whitespace-normal wrap-break-word">
                 {review.text}
               </p>
-              <div className="mt-3 flex items-center gap-2 text-xs text-gray-400">
+              <div className="mt-3 flex items-center gap-1 text-xs text-gray-400">
                 <span>{review.country}</span>
                 <span>{review.author}</span>
               </div>
@@ -89,11 +89,11 @@ export default async function Reviews() {
               className="inline-block bg-white rounded-xl p-4 shadow-sm min-w-[280px] md:min-w-[320px]"
             >
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-yellow-400">⭐️</span>
-                <span className="text-yellow-400">⭐️</span>
-                <span className="text-yellow-400">⭐️</span>
-                <span className="text-yellow-400">⭐️</span>
-                <span className="text-yellow-400">⭐️</span>
+                {Array.from({ length: 5 }, (_, idx) => (
+                  <span key={idx} className="text-yellow-400">
+                    <AppleEmoji name="star" />
+                  </span>
+                ))}
               </div>
               <p className="text-gray-700 text-sm whitespace-normal wrap-break-word">
                 {review.text}
