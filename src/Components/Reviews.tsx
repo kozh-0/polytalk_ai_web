@@ -1,56 +1,59 @@
+import { getTranslations } from "next-intl/server";
 import { AppleEmoji } from "./AppleEmoji";
 
-const reviews = [
-  {
-    text: "Разные голоса и уровни 🔥",
-    author: "Константин",
-    rating: 5,
-    country: <AppleEmoji name="de" size={16} />,
-  },
-  {
-    text: "Удобно, что можно выбрать уровень. Прогресс пошел!",
-    author: "Тимур",
-    rating: 5,
-    country: <AppleEmoji name="jp" size={16} />,
-  },
-  {
-    text: "Класс! Бюджетно и всегда под рукой",
-    author: "Марк",
-    rating: 5,
-    country: <AppleEmoji name="cz" size={16} />,
-  },
-  {
-    text: "Лучшая инвестиция в свое развитие за 250 звезд",
-    author: "Андрей",
-    rating: 5,
-    country: <AppleEmoji name="us" size={16} />,
-  },
-  {
-    text: "Интерактивно, интересно, не скучно!",
-    author: "Галина",
-    rating: 5,
-    country: <AppleEmoji name="fr" size={16} />,
-  },
-  {
-    text: "Атас! Нашел испанскую девушку❤️",
-    author: "Айдар",
-    rating: 5,
-    country: <AppleEmoji name="es" size={16} />,
-  },
-  {
-    text: "Бот исправляет ошибки лучше репетитора",
-    author: "Татьяна",
-    rating: 5,
-    country: <AppleEmoji name="gb" size={16} />,
-  },
-];
+export default async function Reviews() {
+  const t = await getTranslations("reviews");
 
-export default function Reviews() {
+  const reviews = [
+    {
+      author: t("users.kostya"),
+      text: t("users.kostya_text"),
+      rating: 5,
+      country: <AppleEmoji name="de" size={16} />,
+    },
+    {
+      author: t("users.timur"),
+      text: t("users.timur_text"),
+      rating: 5,
+      country: <AppleEmoji name="jp" size={16} />,
+    },
+    {
+      author: t("users.mark"),
+      text: t("users.mark_text"),
+      rating: 5,
+      country: <AppleEmoji name="cz" size={16} />,
+    },
+    {
+      author: t("users.andrey"),
+      text: t("users.andrey_text"),
+      rating: 5,
+      country: <AppleEmoji name="us" size={16} />,
+    },
+    {
+      author: t("users.galina"),
+      text: t("users.galina_text"),
+      rating: 5,
+      country: <AppleEmoji name="fr" size={16} />,
+    },
+    {
+      author: t("users.aidar"),
+      text: t("users.aidar_text"),
+      rating: 5,
+      country: <AppleEmoji name="es" size={16} />,
+    },
+    {
+      author: t("users.tatyana"),
+      text: t("users.tatyana_text"),
+      rating: 5,
+      country: <AppleEmoji name="gb" size={16} />,
+    },
+  ];
+
   return (
     <section className="py-16 bg-linear-to-r from-gray-50 to-blue-50 max-w-full overflow-hidden">
       <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">Что говорят ученики</h2>
-        <p className="text-gray-500 text-sm">⭐️ 4.9 • 7 отзывов</p>
+        <h2 className="text-2xl md:text-3xl font-bold mb-2">{t("title")}</h2>
+        <p className="text-gray-500 text-sm">{t("rating")}</p>
       </div>
 
       {/* Бегущая строка */}

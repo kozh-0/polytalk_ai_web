@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "logo": "PolyTalk AI",
+    "start": "Start"
+  },
+  "hero": {
+    "title": "How often do you speak",
+    "subtitle": "the language\nyou're learning?",
+    "description": "Vibrant Telegram chat in 23 languages!",
+    "cta": "Start Free",
+    "users": "100+ users already"
+  },
+  "problems": {
+    "title": "Language learning problems",
+    "no_partner": "No one to talk to",
+    "expensive_tutors": "Need to pay tutors",
+    "no_time": "Lack of time",
+    "fear": "Fear of speaking"
+  },
+  "solution": {
+    "title": "Solution",
+    "languages": "23 languages",
+    "voice_text_translate": "Voice + Text + Translation",
+    "error_correction": "Error correction",
+    "customization": "Level and voice customization",
+    "24_7": "24/7, stress-free",
+    "trial": "Trial mode"
+  },
+  "slider": {
+    "1_start": "Start Screen",
+    "1_descr": "Demonstration of functionality and greeting",
+    "2_welcome": "Welcome Message",
+    "2_descr": "Welcome to PolyTalk!",
+    "3_menu": "Bot Menu",
+    "3_descr": "Information and settings",
+    "4_en": "English example dialogue",
+    "345_descr": "Grammar check, voice & text responses, response options",
+    "5_de": "German example dialogue",
+    "6_ukr": "Ukrainian example dialogue"
+  },
+  "reviews": {
+    "title": "What users are saying",
+    "rating": "⭐️ 4.9 • 7 reviews",
+    "users": {
+      "kostya": "Konstantin",
+      "kostya_text": "Different voices and levels 🔥",
+      "timur": "Timur",
+      "timur_text": "It's great that you can choose a level. I'm making progress!",
+      "mark": "Mark",
+      "mark_text": "Awesome! Affordable and always at hand",
+      "andrey": "Andrew",
+      "andrey_text": "The best investment in my personal growth for 250 stars",
+      "galina": "Galina",
+      "galina_text": "Interactive, interesting, and never boring!",
+      "aidar": "Aidar",
+      "aidar_text": "Holy cow! I found a Spanish girlfriend ❤️",
+      "tatyana": "Tatyana",
+      "tatyana_text": "The bot corrects mistakes better than a tutor"
+    }
+  },
+  "pricing": {
+    "title": "Choose your plan",
+    "subtitle": "Free plan available",
+    "free": {
+      "title": "Free plan",
+      "subtitle": "7 messages per day",
+      "feat": "All features"
+    },
+    "day": "day",
+    "days": "days",
+    "month": "month",
+    "months": "Months",
+    "saving": "Saving",
+    "note": "⭐️ Stars — Telegram's internal currency",
+    "buy_stars_tg": "You can buy them from Telegram",
+    "buy_stars_other": "Or save some money on other platforms",
+    "no_auto_renew": "Subscription without auto-renewal"
+  },
+  "cta": {
+    "title": "Ready to speak new languages?",
+    "subtitle": "Just speak → The bot will guide you"
+  },
+  "copyright": "All rights reserved"
+}

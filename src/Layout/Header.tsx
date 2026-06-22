@@ -3,8 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
+  const t = useTranslations("nav");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -18,7 +21,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 bg-blue-100/80 backdrop-blur-md z-50 border-b border-gray-100">
+      <header className="fixed top-0 left-0 right-0 bg-blue-100/80 backdrop-blur-md z-100 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <nav className="flex items-center justify-between">
             {/* Logo и кнопка */}
@@ -44,7 +47,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="ml-5 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition-colors duration-200"
               >
-                Начать ✨
+                {t("start")} ✨
               </a>
             </div>
 
@@ -59,30 +62,12 @@ export default function Header() {
                   {link.name}
                 </Link>
               ))}
+
+              <LanguageSwitcher />
             </div>
 
             {/* Бургер-кнопка */}
-            <button
-              onClick={toggleMenu}
-              className="sm:hidden flex flex-col gap-1.5 p-2"
-              aria-label="Меню"
-            >
-              <span
-                className={`w-6 h-0.5 bg-gray-600 transition-all duration-300 ${
-                  isMenuOpen ? "rotate-45 translate-y-2" : ""
-                }`}
-              />
-              <span
-                className={`w-6 h-0.5 bg-gray-600 transition-all duration-300 ${
-                  isMenuOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`w-6 h-0.5 bg-gray-600 transition-all duration-300 ${
-                  isMenuOpen ? "-rotate-45 -translate-y-2" : ""
-                }`}
-              />
-            </button>
+            <BurgerButton isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
           </nav>
         </div>
       </header>
@@ -91,6 +76,34 @@ export default function Header() {
     </>
   );
 }
+
+const BurgerButton = ({
+  toggleMenu,
+  isMenuOpen,
+}: {
+  toggleMenu: () => void;
+  isMenuOpen: boolean;
+}) => {
+  return (
+    <button onClick={toggleMenu} className="sm:hidden flex flex-col gap-1.5 p-2" aria-label="Меню">
+      <span
+        className={`w-6 h-0.5 bg-gray-600 transition-all duration-300 ${
+          isMenuOpen ? "rotate-45 translate-y-2" : ""
+        }`}
+      />
+      <span
+        className={`w-6 h-0.5 bg-gray-600 transition-all duration-300 ${
+          isMenuOpen ? "opacity-0" : ""
+        }`}
+      />
+      <span
+        className={`w-6 h-0.5 bg-gray-600 transition-all duration-300 ${
+          isMenuOpen ? "-rotate-45 -translate-y-2" : ""
+        }`}
+      />
+    </button>
+  );
+};
 
 const BurgerMenu = ({
   isMenuOpen,
@@ -120,6 +133,7 @@ const BurgerMenu = ({
               {link.name}
             </Link>
           ))}
+          <LanguageSwitcher />
         </div>
       </div>
 

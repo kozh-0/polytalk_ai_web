@@ -1,61 +1,58 @@
+import { getTranslations } from "next-intl/server";
 import { AppleEmoji } from "./AppleEmoji";
 
-const SUBSCRIPTION_PLANS = [
-  {
-    id: "14-days",
-    days: 14,
-    stars: 150,
-    label: "14 дней",
-    description: "Доступ на 14 дней ✨",
-    buttonText: "14 дней ⭐️ 150 ⭐️",
-    popular: false,
-  },
-  {
-    id: "1-month",
-    days: 30,
-    stars: 250,
-    label: "1 месяц",
-    description: "Доступ на 30 дней ✨",
-    buttonText: "1 месяц ⭐️ 250 ⭐️ -17%",
-    popular: true,
-  },
-  {
-    id: "3-months",
-    days: 90,
-    stars: 600,
-    label: "3 месяца",
-    description: "Доступ на 90 дней ✨",
-    buttonText: "3 мес. ⭐️ 600 ⭐️ -20%",
-    popular: false,
-  },
-  {
-    id: "6-months",
-    days: 180,
-    stars: 1100,
-    label: "6 месяцев",
-    description: "Доступ на 180 дней ✨",
-    buttonText: "6 мес. ⭐️ 1100 ⭐️ -27%",
-    popular: false,
-  },
-  {
-    id: "12-months",
-    days: 365,
-    stars: 2000,
-    label: "12 месяцев",
-    description: "Доступ на 365 дней ✨",
-    buttonText: "12 мес. ⭐️ 2000 ⭐️ -33%",
-    popular: false,
-  },
-];
+export default async function Prices() {
+  const t = await getTranslations("pricing");
 
-export default function Prices() {
+  const SUBSCRIPTION_PLANS = [
+    {
+      id: "14-days",
+      days: 14,
+      stars: 150,
+      label: `14 ${t("days")}`,
+      buttonText: `⭐️ 150 ⭐️`,
+      popular: false,
+    },
+    {
+      id: "1-month",
+      days: 30,
+      stars: 250,
+      label: `1 ${t("month")}`,
+      buttonText: "⭐️ 250 ⭐️ -17%",
+      popular: true,
+    },
+    {
+      id: "3-months",
+      days: 90,
+      stars: 600,
+      label: `3 ${t("months")}`,
+      buttonText: "⭐️ 600 ⭐️ -20%",
+      popular: false,
+    },
+    {
+      id: "6-months",
+      days: 180,
+      stars: 1100,
+      label: `6 ${t("months")}`,
+      buttonText: "⭐️ 1100 ⭐️ -27%",
+      popular: false,
+    },
+    {
+      id: "12-months",
+      days: 365,
+      stars: 2000,
+      label: `12 ${t("months")}`,
+      buttonText: "⭐️ 2000 ⭐️ -33%",
+      popular: false,
+    },
+  ];
   return (
     <section className=" min-h-[50vh] w-full flex items-center justify-center bg-linear-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto py-12 px-4">
         {/* Заголовок */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">Выберите свой план</h2>
-          <p className="text-gray-500 text-sm md:text-base">Можно начать с бесплатного тарифа</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">{t("title")}</h2>
+          <p className="text-gray-500 text-sm md:text-base">{t("subtitle")}</p>
         </div>
 
         {/* Сетка цен */}
@@ -87,30 +84,27 @@ export default function Prices() {
               {/* Цена */}
               <div className="mb-3">
                 <span className="text-3xl font-bold text-blue-600">{plan.stars}</span>
-                <span className="text-gray-500 text-sm"> ⭐️</span>
+                <span className="text-gray-500 text-md"> ⭐️</span>
               </div>
 
               {/* Экономия */}
               {plan.id !== "14-days" && (
                 <div className="text-xs text-green-600 font-semibold mb-2">
-                  {plan.id === "1-month" && "Экономия 50 ⭐️"}
-                  {plan.id === "3-months" && "Экономия 150 ⭐️"}
-                  {plan.id === "6-months" && "Экономия 400 ⭐️"}
-                  {plan.id === "12-months" && "Экономия 1000 ⭐️"}
+                  {t("saving")} {plan.id === "1-month" && "50 ⭐️"}
+                  {plan.id === "3-months" && "150 ⭐️"}
+                  {plan.id === "6-months" && "400 ⭐️"}
+                  {plan.id === "12-months" && "1000 ⭐️"}
                 </div>
               )}
 
               {/* Цена в день/месяц */}
               <div className="text-xs text-gray-400 mb-4">
-                ~{Math.round(plan.stars / plan.days)} ⭐️/день
+                ~{Math.round(plan.stars / plan.days)} ⭐️ / {t("day")}
               </div>
-
-              {/* Описание */}
-              <p className="text-gray-500 text-xs mb-4">{plan.description}</p>
 
               {/* Кнопка */}
               <a
-                href="https://t.me/polytalk_ai_bot"
+                href="https://t.me/PremiumBot?start=polytalk_ai_bot"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`
@@ -135,18 +129,52 @@ export default function Prices() {
               <span className="text-green-600 leading-0">
                 <AppleEmoji name="gift" size={26} />
               </span>
-              <span className="font-semibold text-gray-700">Бесплатный тариф:</span>
-              <span className="text-gray-600">7 сообщений в день</span>
+              <span className="font-semibold text-gray-700">{t("free.title")}:</span>
+              <span className="text-gray-600">{t("free.subtitle")}</span>
               <span className="text-gray-300">•</span>
-              <span className="text-gray-600">Все функции</span>
+              <span className="text-gray-600">{t("free.feat")}</span>
+              <span className="text-gray-300">•</span>
+              <span className="text-gray-600">24/7</span>
             </div>
           </div>
         </div>
 
         {/* Дополнительная информация */}
-        <div className="mt-8 text-center text-xs text-gray-400">
-          <p>⭐️ Звезды — внутренняя валюта Telegram</p>
-          <p className="mt-1">Подписка без авто-продления</p>
+        <div className="mt-8 text-center text-sm text-gray-600">
+          <p>{t("note")}</p>
+          <p>
+            {t("buy_stars_tg")} -{" "}
+            <a
+              href="https://t.me/PremiumBot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              @PremiumBot
+            </a>
+          </p>
+          <p>
+            {t("buy_stars_other")} (
+            <a
+              href="https://ggsel.net/catalog/telegram-stars"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              ggsel.net
+            </a>
+            ,{" "}
+            <a
+              href="https://kupikod.com/console/telegram"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              kupikod.com
+            </a>
+            , ...)
+          </p>
+          <p className="mt-1 text-gray-400">{t("no_auto_renew")}</p>
         </div>
       </div>
     </section>

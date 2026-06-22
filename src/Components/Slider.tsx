@@ -1,5 +1,6 @@
 // components/AutoSlider.jsx
 "use client";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 interface Slide {
@@ -9,39 +10,40 @@ interface Slide {
 }
 
 export default function Slider() {
+  const t = useTranslations("slider");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedImage, setSelectedImage] = useState<Slide | null>(null);
 
   const slides: Slide[] = [
     {
       image: "./tgPreview.jpg",
-      title: "Стартовый экран",
-      description: "Демонстрация функционала и приветствие",
+      title: t("1_start"),
+      description: t("1_descr"),
     },
     {
       image: "./start.jpg",
-      title: "Приветственное сообщение",
-      description: "Добро пожаловать в PolyTalk!",
+      title: t("2_welcome"),
+      description: t("2_descr"),
     },
     {
       image: "./botMenu.jpg",
-      title: "Меню бота",
-      description: "Информация и настройки",
+      title: t("3_menu"),
+      description: t("3_descr"),
     },
     {
       image: "./engEx.jpg",
-      title: "Пример диалога на английском",
-      description: "Проверка ошибок, ответ голосом и текстом, варианты ответа",
+      title: t("4_en"),
+      description: t("345_descr"),
     },
     {
       image: "./germanEx.jpg",
-      title: "Пример диалога на немецком",
-      description: "Проверка ошибок, ответ голосом и текстом, варианты ответа",
+      title: t("5_de"),
+      description: t("345_descr"),
     },
     {
       image: "./ukEx.jpg",
-      title: "Пример диалога на Украинском",
-      description: "Проверка ошибок, ответ голосом и текстом, варианты ответа",
+      title: t("6_ukr"),
+      description: t("345_descr"),
     },
   ];
 
